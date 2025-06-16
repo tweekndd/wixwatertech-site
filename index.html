@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wix Water Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary: #007dc5;
+      --text: #333;
+      --bg: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #e6f0fb;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #004a8f;
+      border-bottom: 2px solid #004a8f;
+    }
+    html { scroll-behavior: smooth; }
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .section img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+    .section img:hover {
+      transform: scale(1.02);
+    }
+    .section h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .project {
+      flex: 1 1 45%;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    footer {
+      background: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 60px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (max-width: 768px) {
+      .projects { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/WIX LOGO.png" alt="Wix Logo">
+    <h1>Wix Water Tech</h1>
+    <p>Advanced Water Treatment for a Sustainable Asia</p>
+  </header>
+
+  <nav>
+    <a href="#company">Company</a>
+    <a href="#commitment">Commitment</a>
+    <a href="#technology">Technology</a>
+    <a href="#projects">Projects</a>
+    <a href="#responsibility">Responsibility</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="section fade-in">
+    <img src="images/顶部图.png" alt="Top Banner">
+  </div>
+
+  <div class="section fade-in" id="company">
+    <h2>Our Company</h2>
+    <p>We provide sustainable biotechnological solutions for the sanitation, environmental hygiene, and on-site treatment of agricultural, industrial, and urban waste and wastewater across Asia.</p>
+    <img src="images/顶部图.png" alt="Company Image">
+  </div>
+
+  <div class="section fade-in" id="commitment">
+    <h2>Our Commitment</h2>
+    <p>This means working responsibly to achieve the purification of the environment in which we operate, without compromising the quality of life in the areas we serve.</p>
+    <img src="images/服务图片.jpg" alt="Commitment Image">
+  </div>
+
+  <div class="section fade-in" id="technology">
+    <h2>Our Technology</h2>
+    <p>We are committed to designing, selling, and commissioning the most advanced self-contained plants. Some of our partners have years of experience and facilities on five continents to process urban solid and organic waste from various sources.</p>
+    <img src="images/工业用水处理.jpg" alt="Technology Image">
+  </div>
+
+  <div class="section fade-in" id="projects">
+    <h2>Project References</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Malaysia Brewery Wastewater Treatment (2019)</h3>
+        <img src="images/酒厂罐子.jpg" alt="Brewery Project">
+      </div>
+      <div class="project">
+        <h3>Malaysia Industrial Water Treatment (2018)</h3>
+        <img src="images/工业罐子.jpg" alt="Industrial Project">
+      </div>
+    </div>
+  </div>
+
+  <div class="section fade-in" id="responsibility">
+    <h2>Social Responsibility</h2>
+    <p>At Wix, we uphold a spirit of integrity and strive to improve the water environment and benefit society by addressing the challenges faced by our stakeholders and customers while promoting business development.</p>
+    <p>This means we apply the same ethical standards and strategies to our corporate citizenship as we do to business growth. As we expand, we meet challenges by leveraging our technology, financial strength, and intellectual resources to benefit employees, customers, and shareholders in a sustainable way.</p>
+  </div>
+
+  <div class="section fade-in" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:contact@wixwatertech.xyz">contact@wixwatertech.xyz</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Wix Water Tech. All rights reserved.
+  </footer>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
